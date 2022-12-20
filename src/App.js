@@ -2,15 +2,15 @@ import React from 'react'
 
 import { Aboult, Footer, Header, Skills, Testimonials, Work } from './container';
 
-const App = () => {
+function App() {
   return (
  <div className='app'>
-  <Header />
-  <Aboult />
-  <Work />
-  <Skills />
-  <Testimonials />
-  <Footer />
+    <Header />
+    <Aboult />
+    <Work />
+    <Skills />
+    <Testimonials />
+    <Footer />
  </div>
     )
 }
