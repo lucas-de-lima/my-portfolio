@@ -4,7 +4,7 @@ import './About.scss'
 
 function About() {
   return (
-    <div>Aboult</div>
+    <div>About</div>
   )
 }
 
