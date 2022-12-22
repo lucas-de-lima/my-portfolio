@@ -35,7 +35,7 @@ function Header() {
           </div>
 
           <div>
-          <p className='p-text'>Desenvolvimento Web</p>
+          <p className='p-text'>Desenvolvedor Web</p>
           <p className='p-text'>Freelancer</p>
           </div>
         </div>
