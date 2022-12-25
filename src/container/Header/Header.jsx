@@ -1,9 +1,10 @@
 /* eslint-disable react/no-array-index-key */
-import React from 'react'
+import React from 'react';
 import { motion } from 'framer-motion';
 
-import { images } from '../../constants'
-import './Header.scss'
+import { AppWrap } from '../../wrapper';
+import { images } from '../../constants';
+import './Header.scss';
 
 const scaleVariants = {
   whileInView: {
@@ -72,4 +73,4 @@ function Header() {
   )
 }
 
-export default Header;
+export default AppWrap(Header, 'home');
