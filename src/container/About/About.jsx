@@ -4,9 +4,9 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 import { AppWrap } from '../../wrapper';
+import { urlFor, client } from '../../client';
 import './About.scss';
 
-import { urlFor, client } from '../../client';
 
 
 function About() {
@@ -43,6 +43,6 @@ function About() {
       </div>
     </>
   )
-}
+};
 
 export default AppWrap(About, 'about');
