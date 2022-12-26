@@ -17,4 +17,19 @@
     }
 }
 
+.app__skills-list {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    margin-right: 5rem;
+
+    @media screen and(max-width: 900px) {
+       margin-right: 0;
+       justify-content: center;
+       align-items: center;
+    }
+}
 
