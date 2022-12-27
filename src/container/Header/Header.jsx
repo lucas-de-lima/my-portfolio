@@ -30,14 +30,14 @@ function Header() {
           <div className='badge-cmp app__flex'>
             <span>👋</span>
             <div style={{marginLeft: 20 }}>
-              <p className='p-text'>Olá, Eu sou</p>
+              <p className='p-text'>Hello, I am</p>
               <h1 className='head-text'>Lucas</h1>
             </div>
           </div>
 
           <div>
-          <p className='p-text'>Desenvolvedor Web</p>
-          <p className='p-text'>Freelancer</p>
+          <p className='p-text'>Web Developer</p>
+          {/* <p className='p-text'>Freelancer</p> */}
           </div>
         </div>
       </motion.div>
