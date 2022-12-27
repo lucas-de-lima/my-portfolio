@@ -1,10 +1,16 @@
+/* eslint-disable no-useless-escape */
+/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-shadow */
 import React, { useState } from 'react';
+
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css'; 
 
 import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { client } from '../../client';
 import './Footer.scss';
+
 
 function Footer() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -19,21 +25,44 @@ function Footer() {
     setFormData({ ...formData, [name]: value })
   };
 
+  const validateEmail = () => {
+    const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    return regex.test(email);
+  };
+
   const handleSubmit = () => {
-    setLoading(true);
-
-    const contact = {
-      _type: 'contact',
-      name,
-      email,
-      message,
+    
+    if( name === '' || email === '' || message === '') {
+      setLoading(false);
+      toast.error("All fields are required and cannot be blank", {
+        position: toast.POSITION.BOTTOM_CENTER
+      });
     }
+    
+    else if (validateEmail()) {
+      setLoading(true);
+  
+      const contact = {
+        _type: 'contact',
+        name,
+        email,
+        message,
+      }
 
-    client.create(contact)
-      .then(() => {
-        setLoading(false);
-        setIsFormSubmitted(true);
-      })
+      client.create(contact)
+        .then(() => {
+          setLoading(false);
+          setIsFormSubmitted(true);
+          toast.success("Obrigado por entrar em contato!", {
+            position: toast.POSITION.BOTTOM_CENTER
+          });
+        })
+    }
+    else {
+      toast.error("Enter a valid email address!", {
+        position: toast.POSITION.BOTTOM_CENTER
+      });
+    }
   };
 
   return (
@@ -51,28 +80,36 @@ function Footer() {
         </div>
       </div>
 
-      {!isFormSubmitted ? 
-      <div className="app__footer-form app__flex">
-        <div className="app__flex">
-          <input className="p-text" type="text" placeholder="Seu Nome" name="name" value={name} onChange={handleChangeInput} />
-        </div>
-        <div className="app__flex">
-          <input className="p-text" type="email" placeholder="Seu Email" name="email" value={email} onChange={handleChangeInput} />
-        </div>
-        <div>
-          <textarea 
-          className="p-text"
-          placeholder="Sua Mensagem"
-          value={message}
-          name="message"
-          onChange={handleChangeInput}
-          />
-        </div>
-        <button type="button" className="p-text" onClick={handleSubmit}>{loading ? 'Enviar' : 'Enviar Mensagem'}</button>
-      </div>
-      : <div>
-          <h3 className="head-text">Obrigado por entrar em contato!</h3>
-        </div>}
+      {!isFormSubmitted ?
+        <> 
+          <div className="app__footer-form app__flex">
+            <div className="app__flex">
+              <input className="p-text" type="text" placeholder="Seu Nome" name="name" value={name} onChange={handleChangeInput} />
+            </div>
+            <div className="app__flex">
+              <input className="p-text" type="email" placeholder="Seu Email" name="email" value={email} onChange={handleChangeInput} />
+            </div>
+            <div>
+              <textarea 
+              className="p-text"
+              placeholder="Sua Mensagem"
+              value={message}
+              name="message"
+              onChange={handleChangeInput}
+              />
+            </div>
+            <button type="button" className="p-text" onClick={handleSubmit}>{loading ? 'Enviar' : 'Enviar Mensagem'}</button>
+          </div>
+          <ToastContainer />
+        </>
+      :  
+        <>
+          <div>
+            <h3 className="head-text">Obrigado por entrar em contato!</h3>
+          </div>
+          <ToastContainer />
+        </>  
+      }
     </>
   )
 };
