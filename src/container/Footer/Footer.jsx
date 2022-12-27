@@ -64,7 +64,7 @@ function Footer() {
           className="p-text"
           placeholder="Sua Mensagem"
           value={message}
-          name={message}
+          name="message"
           onChange={handleChangeInput}
           />
         </div>
