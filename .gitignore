@@ -11,9 +11,6 @@
 # production
 /build
 
-#back-end
-/backend_sanity
-
 # misc
 .DS_Store
 .env
