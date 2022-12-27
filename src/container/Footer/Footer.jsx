@@ -62,13 +62,13 @@ function Footer() {
         <div>
           <textarea 
           className="p-text"
-          placeholder="Sua Menssagem"
+          placeholder="Sua Mensagem"
           value={message}
           name={message}
           onChange={handleChangeInput}
           />
         </div>
-        <button type="button" className="p-text" onClick={handleSubmit}>{loading ? 'Enviar' : 'Enviar Menssagem'}</button>
+        <button type="button" className="p-text" onClick={handleSubmit}>{loading ? 'Enviar' : 'Enviar Mensagem'}</button>
       </div>
       : <div>
           <h3 className="head-text">Obrigado por entrar em contato!</h3>
