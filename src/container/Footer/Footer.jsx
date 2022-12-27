@@ -80,5 +80,5 @@ function Footer() {
 export default AppWrap(
   MotionWrap(Footer, 'app__footer'),
    'footer',
-   'app__whitebg'
+   "app__whitebg"
   );
