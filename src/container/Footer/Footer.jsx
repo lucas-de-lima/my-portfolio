@@ -53,7 +53,7 @@ function Footer() {
         .then(() => {
           setLoading(false);
           setIsFormSubmitted(true);
-          toast.success("Obrigado por entrar em contato!", {
+          toast.success("Your message has been sent!", {
             position: toast.POSITION.BOTTOM_CENTER
           });
         })
@@ -67,7 +67,7 @@ function Footer() {
 
   return (
     <>
-      <h2 className="head-text">Pegue seu café & fale comigo!</h2>
+      <h2 className="head-text">Take A Coffee & Chat With Me</h2>
 
       <div className="app__footer-cards">
         <div className="app__footer-card">
@@ -84,28 +84,28 @@ function Footer() {
         <> 
           <div className="app__footer-form app__flex">
             <div className="app__flex">
-              <input className="p-text" type="text" placeholder="Seu Nome" name="name" value={name} onChange={handleChangeInput} />
+              <input className="p-text" type="text" placeholder="Your Name" name="name" value={name} onChange={handleChangeInput} />
             </div>
             <div className="app__flex">
-              <input className="p-text" type="email" placeholder="Seu Email" name="email" value={email} onChange={handleChangeInput} />
+              <input className="p-text" type="email" placeholder="Your Email" name="email" value={email} onChange={handleChangeInput} />
             </div>
             <div>
               <textarea 
               className="p-text"
-              placeholder="Sua Mensagem"
+              placeholder="Your Message"
               value={message}
               name="message"
               onChange={handleChangeInput}
               />
             </div>
-            <button type="button" className="p-text" onClick={handleSubmit}>{loading ? 'Enviar' : 'Enviar Mensagem'}</button>
+            <button type="button" className="p-text" onClick={handleSubmit}>{!loading ? 'Send Message' : 'Sending...'}</button>
           </div>
           <ToastContainer />
         </>
       :  
         <>
           <div>
-            <h3 className="head-text">Obrigado por entrar em contato!</h3>
+            <h3 className="head-text">Thank you for getting in touch!</h3>
           </div>
           <ToastContainer />
         </>  
