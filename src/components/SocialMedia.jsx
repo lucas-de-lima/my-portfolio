@@ -1,10 +1,19 @@
 import React from 'react';
 import { BsTwitter, BsInstagram } from 'react-icons/bs';
+import { AiFillGithub } from 'react-icons/ai';
 import { FaFacebookF } from 'react-icons/fa';
 
 function SocialMedia() {
   return (
     <div className="app__social">
+        <div>
+            <a 
+              href="https://github.com/Lucas-De-Lima" 
+              target="_blank" 
+              rel="noopener noreferrer">
+                <AiFillGithub />
+            </a>
+        </div>
         <div>
             <a 
               href="https://twitter.com/LucasDeLima___" 

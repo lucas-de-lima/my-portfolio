@@ -4,6 +4,7 @@
   "homepage": "my-portfolio/",
   "private": true,
   "dependencies": {
+    "@react-icons/all-files": "^4.1.0",
     "@sanity/client": "^3.4.1",
     "@sanity/image-url": "^1.0.1",
     "@testing-library/jest-dom": "^5.16.5",
