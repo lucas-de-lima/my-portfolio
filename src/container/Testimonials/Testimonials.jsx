@@ -4,7 +4,7 @@
 /* eslint-disable react/jsx-no-useless-fragment */
 import React, { useState, useEffect } from 'react';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 
@@ -13,7 +13,7 @@ import './Testimonials.scss';
 function Testimonial() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [testimonials, setTestimonials] = useState([]);
-  const [brands, setBrands] = useState([]);
+  // const [brands, setBrands] = useState([]);
 
   const handleClick = (index) => {
     setCurrentIndex(index);
@@ -21,15 +21,15 @@ function Testimonial() {
 
   useEffect(() => {
     const query = '*[_type == "testimonials"]';
-    const brandsQuery = '*[_type == "brands"]';
+    // const brandsQuery = '*[_type == "brands"]';
 
     client.fetch(query).then((data) => {
       setTestimonials(data);
     });
 
-    client.fetch(brandsQuery).then((data) => {
-      setBrands(data);
-    });
+    // client.fetch(brandsQuery).then((data) => {
+    //   setBrands(data);
+    // });
   }, []);
 
   return (
@@ -58,8 +58,13 @@ function Testimonial() {
           </div>
         </>
       )}
+          {/* "A DIV A BAIXO SE REFERE A MARCAS,
+          COMO NÃO PRECISO DISSO POR ENQUANTO,
+          ELA FICARA COMNETADA, ASSIM COMO TODOS AS SUAS DEPENDENCIAS:
+          IMPORTAÇÃO DO MOTION E O ESTADO brands" 
+          CHAMADA A API E FUNÇÃO */}
 
-      <div className="app__testimonial-brands app__flex">
+      {/* <div className="app__testimonial-brands app__flex">
         {brands.map((brand) => (
           <motion.div
             whileInView={{ opacity: [0, 1] }}
@@ -69,7 +74,7 @@ function Testimonial() {
             <img src={urlFor(brand.imgUrl)} alt={brand.name} />
           </motion.div>
         ))}
-      </div>
+      </div> */}
     </>
   );
 }
