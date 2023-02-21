@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.5369b3c8.css",
-    "main.js": "/my-portfolio/static/js/main.86bdb5c0.js",
+    "main.css": "/my-portfolio/static/css/main.36599b55.css",
+    "main.js": "/my-portfolio/static/js/main.325cbe67.js",
+    "static/media/profile.png": "/my-portfolio/static/media/profile.cdb0d78b1af1747a16ce.png",
     "static/media/about04.png": "/my-portfolio/static/media/about04.fa7b3a72ed32b0e25bfb.png",
     "static/media/about02.png": "/my-portfolio/static/media/about02.7a3df03410ee756268ec.png",
     "static/media/about01.png": "/my-portfolio/static/media/about01.080509de05322b7aafda.png",
@@ -11,7 +12,6 @@
     "static/media/spotify.png": "/my-portfolio/static/media/spotify.2b5e9be1eb1ab501e7cd.png",
     "static/media/nb.png": "/my-portfolio/static/media/nb.98f3253e32cc67a4cb5e.png",
     "static/media/logo.png": "/my-portfolio/static/media/logo.62ebba4a081721844994.png",
-    "static/media/profile.png": "/my-portfolio/static/media/profile.8d638f89c65749d28997.png",
     "static/media/asus.png": "/my-portfolio/static/media/asus.514bc34955008a92e09f.png",
     "static/media/adidas.png": "/my-portfolio/static/media/adidas.83df8153294f9137d308.png",
     "static/media/bolt.png": "/my-portfolio/static/media/bolt.64e7d9d30ece478ef3a0.png",
@@ -29,11 +29,11 @@
     "static/media/skype.png": "/my-portfolio/static/media/skype.c8d7ee175da5b4c8a8ab.png",
     "index.html": "/my-portfolio/index.html",
     "static/media/circle.svg": "/my-portfolio/static/media/circle.134eeeb1e58895b892195fe8ed63bc9f.svg",
-    "main.5369b3c8.css.map": "/my-portfolio/static/css/main.5369b3c8.css.map",
-    "main.86bdb5c0.js.map": "/my-portfolio/static/js/main.86bdb5c0.js.map"
+    "main.36599b55.css.map": "/my-portfolio/static/css/main.36599b55.css.map",
+    "main.325cbe67.js.map": "/my-portfolio/static/js/main.325cbe67.js.map"
   },
   "entrypoints": [
-    "static/css/main.5369b3c8.css",
-    "static/js/main.86bdb5c0.js"
+    "static/css/main.36599b55.css",
+    "static/js/main.325cbe67.js"
   ]
 }
