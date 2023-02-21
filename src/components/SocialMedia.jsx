@@ -1,7 +1,9 @@
 import React from 'react';
-import { BsTwitter, BsInstagram } from 'react-icons/bs';
+import { BsInstagram } from 'react-icons/bs';
 import { AiFillGithub } from 'react-icons/ai';
 import { FaFacebookF } from 'react-icons/fa';
+import { SlSocialLinkedin } from 'react-icons/sl';
+
 
 function SocialMedia() {
   return (
@@ -16,10 +18,10 @@ function SocialMedia() {
         </div>
         <div>
             <a 
-              href="https://twitter.com/LucasDeLima___" 
+              href="https://www.linkedin.com/in/dev-lucasdelima/" 
               target="_blank" 
               rel="noopener noreferrer">
-                <BsTwitter />
+                <SlSocialLinkedin />
             </a>
         </div>
         <div>
